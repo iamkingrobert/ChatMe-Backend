@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: ["https://chatme-backend.onrender.com"]}));
+app.use("https://chatme-backend.onrender.com");
 
 app.get("/authenticate", async (req, res) => {
   const { username } = req.body;

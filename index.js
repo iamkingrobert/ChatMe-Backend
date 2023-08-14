@@ -4,7 +4,9 @@ const axios = require("axios");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://chat-me-restapi-app-git-master-iamkingrobert.vercel.app"}));
+app.use(cors({ origin: "https://chat-me-restapi-app-git-master-iamkingrobert.vercel.app",
+             methods: ["GET", "POST"],
+             }));
 
 app.get("/authenticate", async (req, res) => {
   const { username } = req.body;
@@ -21,4 +23,4 @@ app.get("/authenticate", async (req, res) => {
   }
 });
 
-app.listen(3001);
+app.listen(8080);

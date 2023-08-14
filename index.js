@@ -6,6 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: "https://chat-me-restapi-app-git-master-iamkingrobert.vercel.app",
              methods: ["GET", "POST"],
+               allowedHeaders: ["Content-Type"],
+    credentials: true,
              }));
 
 app.get("/authenticate", async (req, res) => {

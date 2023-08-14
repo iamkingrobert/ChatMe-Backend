@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://chat-me-restapi-app-git-master-iamkingrobert.vercel.app",
+app.use(cors({ origin: "http://chat-me-restapi-app-git-master-iamkingrobert.vercel.app",
              methods: ["GET", "POST"], allowedHeaders: ["Content-Type"], credentials: true,
              }));
 
